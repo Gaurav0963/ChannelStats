@@ -1,0 +1,54 @@
+h2 {
+  text-align: center;
+  text-decoration-color: #000000;
+  font-family: system-ui, -apple-system;
+  color: #000000;
+}
+
+
+.form {
+  margin: auto;
+  text-align: center;
+}
+
+.comment {
+  margin: auto;
+  text-align: center;
+}
+
+.table {
+  background-color: #ffffff;
+  width: 99%;
+  /* text-align: center; */
+  border-collapse: collapse;
+  font-size: 0.9em;
+  min-width: 700px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin: auto;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f3f3f3;
+
+}
+
+
+.link {
+  text-decoration: none;
+  color: #000000
+}
+
+.link:hover {
+  text-decoration: none;
+  color: #f3f3f3;
+
+}
+
+.url:hover{
+  text-decoration: none;
+  color: red;
+}
+
+.title:hover{
+  color: red;
+}

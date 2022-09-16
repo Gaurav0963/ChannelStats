@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='redg.ico') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/comments.css" type="text/css">
+  <title>Comment Page</title>
+
+</head>
+
+
+
+<body>
+
+  {% if reviews|length == 0 %}
+
+  <div class="card text-center">
+    <div class="card-header">
+      You've encountered an ERROR!
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Please Refresh!</h5>
+      <p class="card-text">Somtimes comments do not load for a particular video as youtube is dynamic website i.e., it
+        uses javascript.
+        <br>Please try refreshing and if it doesn't work go to <strong>Homepage</strong> and try again. <br>Thankyou!
+      </p>
+      <a href="/" class="btn btn-primary">HomePage</a>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>
+  {% else %}
+  <h2><span style="color: red;">YouTube</span> Video Original Comments</h2>
+
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Comment</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for review in reviews %}
+      <tr>
+        <td>{{loop.index}}</td>
+        <td>{{review['Name']}}</td>
+        <td>{{review['Comment']}}</td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+  {% endif %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

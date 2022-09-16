@@ -1,0 +1,54 @@
+  .form {
+      margin: auto;
+      text-align: center;
+  }
+
+  h2 {
+      text-align: center;
+      text-decoration-color: #000000;
+      font-family: system-ui, -apple-system;
+      color: #000000;
+  }
+
+  .content-table {
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      min-width: 700px;
+      border-radius: 10px 10px 0 0;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      margin: auto;
+  }
+
+  .content-table thead tr {
+      background-color: #009879;
+      color: #ffffff;
+      text-align: left;
+      font-weight: bold;
+      font-family: system-ui, -apple-system;
+      font-size: medium;
+  }
+
+  .content-table th,
+  .content-table td {
+      padding: 12px 15px;
+  }
+
+  .content-table tbody tr {
+      border-bottom: 1px solid #dddddd;
+      font-family: system-ui, -apple-system;
+  }
+
+  .content-table tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+  }
+
+  .content-table tbody tr:last-of-type {
+      background-color: 2px solid #009879;
+  }
+
+  #error {
+      font-size: large;
+      text-align: center;
+  }

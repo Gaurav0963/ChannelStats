@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='redg.ico') }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Error</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<style>
+  #box1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+    margin-left: 25%;
+    /* padding: 15px; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+  }
+
+  .col-sm-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+</style>
+
+<body>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div id="box1" class="card">
+        <div class="card-body">
+          <h5 class="card-title">Can't process entered link</h5>
+          <p class="card-text">Please enter only YouTube channel link. This search tab can not accept any other link. By
+            pressing button below you can go to the previous page and may try again. </p>
+          <a href="/" class="btn btn-primary">HomePage</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

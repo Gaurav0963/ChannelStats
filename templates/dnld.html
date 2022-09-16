@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='redg.ico') }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Download Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<style>
+  h1 {
+    top: 10px;
+    text-align: center;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  div {
+    text-align: center;
+    box-sizing: border-box;
+    width: 55%;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.20);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+</style>
+
+
+
+<body>
+  <h1>Caution!</h1>
+  <br><br>
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Filesize &colon; {{Filesize}} KB</h4>
+    <p>Filename = {{filename}}</p>
+    <p>Downloaded file is saved in C drive. Directory is C:\YouTubeVideo\Downloads</p>
+    
+  </div><br>
+
+  <div class="alert alert-warning" role="alert">
+    <p>Download feature works fine when running on localhost but doesn't seem to work after
+      deployment.</p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

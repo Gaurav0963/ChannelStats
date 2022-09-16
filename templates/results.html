@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='redg.ico') }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/results.css">
+  <title>CHANNEL STATISTICS</title>
+
+
+</head>
+
+
+
+<body class="body">
+  <h2><span style="color: red;"><strong>{{reviews[0]['author']}}</strong></span><br>CHANNEL STATISTICS</h2>
+
+  <table class="table" width="99%">
+    <thead class="table-dark">
+      <tr>
+        <th>S.No</th>
+        <th style="color: red;">Video URL</th>
+        <th>Title</th>
+        <th>Likes</th>
+        <th>Views</th>
+        <th>Thumbnail Link</th>
+        <th width="200px">Download & Comment</th>
+        <!-- <th>Comment</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      {% for review in reviews %}
+      <tr>
+        <!-- <td>{{loop.index}}</td> -->
+        <td>{{review['index']}}</td>
+        <td class="url"><a href="{{review['video_URL']}}" target="_blank">{{review['video_URL']}}</a></td>
+        <td class="title">{{review['Title']}}</td>
+        <td>{{review['Likes']}}</td>
+        <td>{{review['Views']}}</td>
+        <td><a href="{{review['Thumbnail_link']}}" target="_blank">{{review['Thumbnail_link']}}</a></td>
+        <td>
+          <button type="button" class="btn btn-outline-dark btn-sm mx=1"><a class="link"
+              href="/download/{{review['id']}}" target="_blank">Download</a></button>
+          <button type="button" class="btn btn-outline-dark btn-sm mx=1"><a class="link"
+              href="/comments/{{review['id']}}" target="_blank">Comment</a></button>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item active">
+      </li>
+      <li class="page-item"><a class="page-link" href="/search/0/25/" target="_parent">Page 1</a></li>
+      <li class="page-item"><a class="page-link" href="/search/26/50/" target="_blank">Page 2</a></li>
+      <li class="page-item"><a class="page-link" href="/about/" target="_blank">About Page</a></li>
+      <!-- <li class="page-item"><a class="page-link" href="/search/21/30/">3</a></li>
+      <li class="page-item"><a class="page-link" href="/search/31/40/">4</a></li>
+      <li class="page-item"><a class="page-link" href="/search/41/50/">5</a></li> -->
+      <li class="page-item">
+      </li>
+    </ul>
+  </nav>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

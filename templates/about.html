@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='redg.ico') }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<style>
+ 
+  h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: black;
+    text-decoration: dashed;
+    text-shadow: 2px 2px #f3f3f3;
+  }
+
+  .box {
+    background-color: rgb(251, 251, 251);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.20);
+    color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    box-sizing: border-box;
+    justify-content: center;
+    width: 51%;
+    padding: 60px;
+    margin: auto;
+    /* border: 2px solid rgb(105, 58, 58); */
+    /* border-radius: 10px 10px 10px 10px; */
+    word-wrap: break-word;
+  }
+
+</style>
+
+
+<body style="background-color: rgb(201, 232, 255);">
+  <h1 style="text-shadow: 1px 1px 5px gray;">About <br> <span
+      style="color: red; text-shadow: 1px 1px 3px rgb(228, 145, 145);">YouTube</span> CHANNEL STATISTICS</h1>
+
+  <br>
+  <div class="box">
+    <h5>What is the scope of this project ?</h5>
+    <p>The scope of the project is to present the 50 latest uploaded videos available on requested youtube channel in a
+      tabular form, for the purpose of analysis. <br>NOTE: For analysis purposes only publicly available data is scraped
+      such as VideoURL, Tile of video, likes, viewcount, comments, etc.
+    </p><br>
+    <h5>What modules of python I have used to make this project ?</h5>
+    <p>
+      This project is made with the help of <a href="https://flask.palletsprojects.com/en/2.2.x/">Flask framework</a>.
+      Flask framework is used here to connect python code to HTML web page, when user clicks on any button or link on
+      webpage then, that link is then routed via flask to a particular function defined in the <span
+        style="color: red;">python code</span> at the backend.
+      Note: Official link of Flask framework has provided above, or <a
+        href="https://flask.palletsprojects.com/en/2.2.x/">click here</a>.
+    </p><br>
+    <h5>What problems/challeges I have faced during this project ?</h5>
+    <p>
+      Challenges posed by this project has taught me a lot of python and a bit of HTML, CSS, and javascript in few days
+      that I spent working on it. Few of those challenges are enumerated below,
+    <ol>
+      <li>How to pass data from a function to a HTML page. <span style="color: rgb(150, 149, 149);">Hint: return render_template("page.html",
+        variableForJinja=variable_from_pythonCode)</span> </li>
+      <li>How to use the data sent by python function to my HTML page.<span style="color: rgb(150, 149, 149);"> Hint: google Jinja2</span></li>
+      <li>How to make a functional button and extract the data from URL for processing in python code. For example, in
+        CHANNEL STATISTICS page, every row has a <span style="color: red;">Comment and Download</span> button for a
+        different video. Every click, say on Comment button, should scrape comments from a different video and show it in a different table. Challenges faced here were,
+      
+        <ul>
+            <li>How to link each button to a different video when the table is generated dynamically.</li>
+            <li>Lets say if the button is linked to videoURL, How to extract relevent data from the Link that is generated after click of a button.</li>
+            <li>How to pass the extracted data from button click to the python funtion.</li>
+        </ul></li>
+        <li>Above all, most exhausting challenge was to go through the Official documentation of Flask and jinja to make the code work.</li>
+    </ol>
+    </p><br>
+    <h5>Is there any challenge I am facing right now?</h5>
+    <p>
+      Well yes.
+      <ol>
+        <li>
+          Download button is not working after deploymet of this project. I am using python's <span style="color: red;">pafy module</span>, which in turn uses <span style="color: red;">youtube-dl</span> to download the youtube video. For now download button is working fine if I download any youtube video while running my code on localhost server (my laptop).
+        </li>
+        <li>
+          I am not able to load all 50 results of rows in <span style="color: red;">heroku</span> and <span style="color: red;">AWS</span> after deployment. So to tackle that I want to load pages in parts using <span style="color: red;">pagination</span> but I am not able to use pagination in python.
+          <ul>
+            <li>
+              If I try to load 50 search results on one page, Heroku gives <span style="color: red;">resquest timeout error</span>, because for free tier deployment Heroku gives 30 seconds of time to your HTTPS client to make a request, which may be less if you're scraping a website like <span style="color: red;">YouTube</span>. <a href="https://devcenter.heroku.com/articles/request-timeout">Click here</a> to read more.
+            </li>
+          </ul>
+        </li>
+        <li>Not able to use progress-bar for the tasks that are running in the background to show how much time is remaining. I think it will require the knowledge of javascript.</li>
+      </ol> 
+    </p><br>
+    <h5>Why I did not use YouTube API to scrape youtube data?</h5>
+    <p>
+      I didn't use YouTube API for scraping YouTube data because I have to put this project on my github account and many people can see this project there. So as I have learnt that my YouTube API key can be misused.
+    </p><br>
+    <hr>
+    
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
