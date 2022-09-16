@@ -103,6 +103,7 @@ def comment(vid):
 
 
 @app.route("/about/")
+@cross_origin()
 def about():
     return render_template("about.html")
 
