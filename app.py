@@ -88,6 +88,7 @@ def download(text):
 
 
 @app.route("/comments/<vid>", methods=['GET', 'POST'])
+@cross_origin()
 def comment(vid):
     comments = Comments(vid)
     reviews = []
