@@ -85,7 +85,7 @@
       Well, Yes!
       <ol>
         <li>
-          &#9745;<span style="color: red;">(see edit: SOLVED!!!)</span>Download button is not working after deployment of this project. I am using python's <span style="color: red;">pafy module</span>, which in turn uses <span style="color: red;">youtube-dl</span> to download the youtube video. For now download button is working fine if I download any youtube video while running my code on localhost server (my laptop).
+          &#9745;<span style="color: red;">(see updates below: SOLVED!!!)</span>Download button is not working after deployment of this project. I am using python's <span style="color: red;">pafy module</span>, which in turn uses <span style="color: red;">youtube-dl</span> to download the youtube video. For now download button is working fine if I download any youtube video while running my code on localhost server (my laptop).
         </li>
         <li>
           I am not able to load all 50 results of rows in <span style="color: red;">heroku</span> and <span style="color: red;">AWS</span> after deployment. So to tackle that I want to load pages in parts using <span style="color: red;">pagination</span> but I am not able to use pagination in python.
@@ -103,14 +103,10 @@
       I didn't use YouTube API for scraping YouTube data because I have to put this project on my github account and many people can see this project there. So as I have learnt that my YouTube API key can be misused.
     </p>
     <hr>
-    <div class="box">
       <ol>
-        EDIT 1
+        <h5>UPDATE 1: SOLVED ISSUE REGARDING DOWNLOAD NOT WORKING AFTER DEPLOYMENT</h5>
         <li>&#9745;Made download buton functional. I used BytesIO library which allowed me to stream my to be dowloaded video to a buffer, i.e., which means my video will never be stored in the server, this let me to store the video in a hosting environmet and I didn't need any storage space. Read Official Document by <a href="https://docs.python.org/3/library/io.html#buffered-streams">clicking here</a>.</li>
       </ol>
-
-    </div>
-
     
 
   </div>
