@@ -1,0 +1,70 @@
+*{
+    margin: 10px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2{
+    text-align: center;
+    text-shadow: 1px 1px 1px 5px;
+}
+
+h2:hover{
+    /* color: blueviolet; */
+    font-weight: bold;
+}
+
+/* .box{
+    display: inline-block;
+    border: 1px solid black;
+} */
+
+/* #imagebox{
+    display: flex;
+    max-width: 600px;
+    border: 2px rgb(4, 4, 4);
+
+} */
+
+/* #form{
+    display: inline-block;
+    max-width: 500px;
+    width: 350px;
+    position: relative;
+    top: 150px;
+    border: 1px solid red;
+} */
+
+img{
+    height: 350px;
+    width: 610px;
+    /* border: 1px solid rgb(0, 0, 0); */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.50);
+    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.10); */
+}
+
+
+.container{
+    padding: 2em;
+    display: grid;
+    /* grid-gap: 0.5em; */
+    /* border: 1px solid orangered; */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+   
+}
+
+.button{
+    border: 1px solid black;
+    background-color: aliceblue;
+}
+.button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.25s;
+}
+
+/* .box{
+    padding: 2em;
+    border-radius: .3em;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.10);
+} */
