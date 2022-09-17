@@ -48,6 +48,7 @@ def homePage():
 @app.route('/search/<int:start>/<int:end>/',methods=['POST','GET']) 
 @cross_origin()
 def index(start, end):
+    #A check to stop from going back to welcome page if 'Page 1' button is clicked.
     if start == 1:
         if request.method == 'POST':
             try:
