@@ -52,3 +52,11 @@
       font-size: large;
       text-align: center;
   }
+
+  .table-dark tr th{
+
+    display: relative;
+    position: sticky;
+    top: 0;
+
+  }

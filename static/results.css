@@ -52,3 +52,11 @@ h2 {
 .title:hover{
   color: red;
 }
+
+.table-dark tr th{
+
+  display: relative;
+  position: sticky;
+  top: 0;
+
+}
