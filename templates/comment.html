@@ -12,7 +12,23 @@
 
 </head>
 
+<style>
+  .box {
 
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+    word-wrap: break-word;
+    box-shadow: inset;
+
+  }
+  .button{
+    text-align: center;
+  }
+  .card-title{
+    text-align: center;
+  }
+</style>
 
 <body>
 
@@ -20,20 +36,24 @@
 
   <div class="card text-center">
     <div class="card-header">
-      You've encountered an ERROR!
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Please Refresh!</h5>
-      <p class="card-text">Somtimes comments do not load for a particular video as youtube is dynamic website i.e., it
-        uses javascript.
-        <br>Please try refreshing and if it doesn't work go to <strong>Homepage</strong> and try again. <br>Thankyou!
-      </p>
-      <a href="/" class="btn btn-primary">HomePage</a>
-    </div>
-    <div class="card-footer text-muted">
-    
+      You may have encountered an ERROR!
     </div>
   </div>
+
+  <div class="box">
+    <h5 class="card-title">Please Refresh!</h5>
+    <p>Sometimes comments do not load for a particular YouTube video for the following reasons:
+    <ol>
+      <li>The requested video may not have any comments yet.</li>
+      <li>www.youtube.com is a dynamic website (uses javascript).</li>
+    </ol>Please try refreshing this page a few times and if it doesn't work go to <i>Homepage</i> and try again.
+    Thankyou!
+    </p><br>
+    <div class="button">
+      <a href="/" class="btn btn-outline-primary btn-sm" >HomePage</a>
+    </div>
+  </div>
+
   {% else %}
   <h2><span style="color: red;">YouTube</span> Video Original Comments</h2>
 

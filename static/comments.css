@@ -6,10 +6,16 @@
   h2 {
       text-align: center;
       text-decoration-color: #000000;
-      font-family: system-ui, -apple-system;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #000000;
   }
 
+  .table-dark{
+    display:relative;
+    position: sticky;
+    top: 0;
+  }
+/* 
   .content-table {
       border-collapse: collapse;
       margin: 25px 0;
@@ -46,7 +52,7 @@
 
   .content-table tbody tr:last-of-type {
       background-color: 2px solid #009879;
-  }
+  } */
 
   #error {
       font-size: large;

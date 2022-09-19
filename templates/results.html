@@ -8,9 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="/static/results.css">
-  <title>CHANNEL STATISTICS</title>
-
-
+  <title>Search Results - {{reviews[0]['author']}}</title>
 </head>
 
 
@@ -28,7 +26,6 @@
         <th>Views</th>
         <th>Thumbnail Link</th>
         <th width="200px">Download & Comment</th>
-        <!-- <th>Comment</th> -->
       </tr>
     </thead>
     <tbody>
@@ -38,7 +35,7 @@
         <td>{{review['index']}}</td>
         <td class="url"><a href="{{review['video_URL']}}" target="_blank">{{review['video_URL']}}</a></td>
         <td class="title">{{review['Title']}}</td>
-        <td>{{review['Likes']}}</td>
+        <td class="likes">{{review['Likes']}}</td>
         <td>{{review['Views']}}</td>
         <td><a href="{{review['Thumbnail_link']}}" target="_blank">{{review['Thumbnail_link']}}</a></td>
         <td>
