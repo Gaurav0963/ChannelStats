@@ -53,10 +53,17 @@ h2 {
   color: red;
 }
 
+<<<<<<< HEAD
 .table-dark tr th{
 
   display: relative;
   position: sticky;
   top: 0;
 
+=======
+.table-dark{
+  display:relative;
+  position: sticky;
+  top: 0;
+>>>>>>> 8232e75ee256557a0e9dfea56b308c9e4179e2c1
 }
