@@ -16,7 +16,7 @@ app.config['SECRET_KEY'] = "random012gibberish0458made2124things52easierfyugoldf
 @app.route('/home', methods=['GET', 'POST'])
 @cross_origin()
 def homePage():
-    return render_template("new.html")
+    return render_template("index.html")
 
 
 @app.route("/about/")
@@ -46,7 +46,7 @@ def index(start, end):
                 return render_template('error.html')
         else:
             app.logger.warning("POST request failed on index function, returning to homepage")
-            return render_template('new.html')
+            return render_template('index.html')
     else:
         app.logger.info("...using pagination...clicked on page_1 or page_2")
         reviews = FetchDataFromChannel_URL(start, end)
@@ -135,4 +135,4 @@ def comment(video_id):
 
 
 if __name__ == "__main__":
-	app.run(port='8000',debug=True)
+	app.run(port='1000',debug=True)

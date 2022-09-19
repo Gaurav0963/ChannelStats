@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='redg.ico') }}">
+    <link rel="stylesheet" href="/static/index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Welcome!</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <div class="container">
+
+        <div class="item head h1">
+            <h1><span style="color: orangered;">
+                    YouTube
+                </span> CHANNEL STATISTICS</h1>
+        </div>
+
+
+        <div class="item">
+            <form action="/search/1/25/" method="POST">
+                <div class="searchbar">
+                    <input class="searchinput" type="url" name="search" placeholder="Enter Youtube Channel Link"
+                        required>
+                    <button class="button" type="submit">Search</button>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class=" item infobar">
+            <p>Please enter the YouTube Channel URL in the above search bar. <br>Check the URL format below,<br>https://www.youtube.com/c/channel_id</p>
+        </div>
+
+
+        <div class="item thanks">
+            <p>
+                <br>Special Thanks to <i>SUDHANSHU SIR</i> and <i>SUNNY SIR</i>
+            </p>
+        </div>
+
+        <div class="item">
+            <footer class="footer">
+                <a class="button item" href="/about/" type="button">About Project</a>
+                <br>FSDS BootCamp &#10096;Made by: GAURAV SINGH RAJPUT&#10097; &#9993; gsr094@gmail.com
+            </footer>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
